@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elder Scrolls Online | English Fan</title>
+  <style>
+    :root{
+      --gold:#d4af37;
+      --dark:#0d0d0d;
+      --light:#f2f2f2;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
+    body{background:var(--dark);color:var(--light);line-height:1.6}
+    a{color:var(--gold);text-decoration:none}
+    header{
+      background:url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+      position:relative;
+    }
+    header::after{
+      content:'';position:absolute;inset:0;background:rgba(0,0,0,.65);
+    }
+    header *{z-index:2}
+    h1{font-size:3.5rem;margin-bottom:1rem;text-shadow:0 0 8px var(--gold)}
+    .btn{
+      background:var(--gold);color:var(--dark);padding:.8rem 2rem;border-radius:4px;font-weight:bold;letter-spacing:1px;
+      transition:.3s;box-shadow:0 0 12px var(--gold);
+    }
+    .btn:hover{transform:translateY(-3px);box-shadow:0 0 20px var(--gold)}
+    nav{
+      position:fixed;top:0;width:100%;background:rgba(0,0,0,.8);backdrop-filter:blur(6px);
+      display:flex;justify-content:space-between;align-items:center;padding:.8rem 2rem;z-index:10;
+    }
+    nav ul{list-style:none;display:flex;gap:1.5rem}
+    section{padding:4rem 2rem;max-width:1100px;margin:auto}
+    h2{font-size:2.2rem;margin-bottom:1.5rem;text-align:center;color:var(--gold)}
+    .races{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+    .race-card{
+      background:#111;border:1px solid #333;border-radius:8px;padding:1.5rem;text-align:center;
+      transition:.3s;
+    }
+    .race-card:hover{transform:translateY(-5px);border-color:var(--gold)}
+    footer{
+      background:#000;text-align:center;padding:2rem 1rem;font-size:.9rem;
+    }
+    @media(max-width:600px){
+      h1{font-size:2.2rem}
+      nav{flex-direction:column;gap:.5rem}
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div style="font-weight:bold;font-size:1.2rem">TESO-EN</div>
+    <ul>
+      <li><a href="#play">Play</a></li>
+      <li><a href="#races">Races</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#download">Download</a></li>
+    </ul>
+  </nav>
+
+  <header id="home">
+    <h1>Elder Scrolls Online</h1>
+    <p>Explore Tamriel with friends</p><br>
+    <a class="btn" href="#play">Start Your Journey</a>
+  </header>
+
+  <section id="races">
+    <h2>Choose Your Race</h2>
+    <div class="races">
+      <div class="race-card">
+        <h3>Altmer</h3>
+        <p>High Elves of Summerset, gifted with enhanced magic abilities.</p>
+      </div>
+      <div class="race-card">
+        <h3>Dunmer</h3>
+        <p>Dark Elves of Morrowind, resistant to fire.</p>
+      </div>
+      <div class="race-card">
+        <h3>Nord</h3>
+        <p>Northern warriors of Skyrim, resilient to cold.</p>
+      </div>
+      <div class="race-card">
+        <h3>Khajiit</h3>
+        <p>Cat-people of Elsweyr, agile and stealthy.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <h2>Latest News</h2>
+    <p style="text-align:center">Stay updated with Tamriel events and updates.</p>
+  </section>
+
+  <section id="download" style="text-align:center">
+    <h2>Download Game</h2>
+    <p>Install the launcher and start your adventure today.</p><br>
+    <a class="btn" href="https://account.elderscrollsonline.com" target="_blank">Official Website</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Fan Project. Elder Scrolls Online belongs to ZeniMax Media. |
+    <a href="https://www.elderscrollsonline.com" target="_blank">Original Website</a>
+  </footer>
+
+  <script>
+    // Smooth scrolling to anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+      anchor.addEventListener('click',function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'})
+      })
+    })
+  </script>
+</body>
+</html>
